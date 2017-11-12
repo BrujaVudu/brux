@@ -1,0 +1,102 @@
+/* Globales
+-----------------------------------------------------*/
+
+:root {
+  --verde: #62e980;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background: #e0e9e1;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  color: #8e8e8e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.inselecto {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* Inicio
+-----------------------------------------------------*/
+
+.titulo {
+  background: #fefefe;
+  box-shadow: 0 40px 55px -35px #939393;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  top: -20px;
+  left: 0px;
+  transition: 0.5s;
+}
+
+.titulo h1 {
+  color: #192e1b;
+  font-size: 6em;
+  text-shadow: -3px 3px 0px var(--verde);
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.titulo h2 {
+  font-size: 1.9em;
+  background: var(--verde);
+  color: #ffffff;
+  padding: 40px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  top: -70px;
+  right: 0;
+  background: #fefefe;
+  padding: 10px 20px;
+  font-weight:600;
+  font-size: 1.2em;
+  border-bottom: solid 2px var(--verde);
+  transition: 0.5s;
+  cursor: pointer;
+  color: #192e1b;
+}
+
+.menu:hover {
+  background: #192e1b;
+  color: #fefefe;
+}
+
+.fueraTitulo {
+  left: -100vw;
+}
+
+.fueraMenu {
+  right: -420px;
+} 
+
+.titulo:after {
+  content: "Diseño de información para p" "\00e1" "ginas web y todo tipo de piezas digitales e impresas.";
+  position: absolute;
+  bottom: -100px;
+  left: 30px;
+}
