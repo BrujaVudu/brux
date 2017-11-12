@@ -103,6 +103,7 @@ body {
 }
 
 .menu .brux {
+  color: var(--verde-brilante);
   width: 0px;
   overflow: hidden;
   transition: 2s;
@@ -123,5 +124,4 @@ body {
 
 .verBrux {
   width: 5ch !important;
-  color: var(--verde-brilante);
 }
