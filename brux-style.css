@@ -2,7 +2,8 @@
 -----------------------------------------------------*/
 
 :root {
-  --verde: #62e980;
+  --verde-brilante: #62e980;
+  --verde-oscuro: #192e1b;
 }
 
 html {
@@ -32,7 +33,7 @@ body {
                                   supported by Chrome and Opera */
 }
 
-/* Inicio
+/* Tarjeta de inicio
 -----------------------------------------------------*/
 
 .titulo {
@@ -49,7 +50,7 @@ body {
 .titulo h1 {
   color: #192e1b;
   font-size: 6em;
-  text-shadow: -3px 3px 0px var(--verde);
+  text-shadow: -3px 3px 0px var(--verde-brilante);
   font-weight: normal;
   text-align: center;
   margin: 0;
@@ -58,7 +59,7 @@ body {
 
 .titulo h2 {
   font-size: 1.9em;
-  background: var(--verde);
+  background: var(--verde-brilante);
   color: #ffffff;
   padding: 40px;
   margin: 0;
@@ -67,24 +68,48 @@ body {
   align-items: center;
 }
 
+.titulo:after {
+  content: "Diseño de información para p" "\00e1" "ginas web y todo tipo de piezas digitales e impresas.";
+  position: absolute;
+  bottom: -100px;
+  left: 30px;
+}
+
+/* Menú
+-----------------------------------------------------*/
+
 .menu {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  right: 20px;
+  left: auto;
   background: #fefefe;
   padding: 10px 20px;
   font-weight:600;
   font-size: 1.2em;
-  border-bottom: solid 2px var(--verde);
-  transition: 0.5s;
+  border-bottom: solid 4px var(--verde-brilante);
+  transition: 0.8s;
   cursor: pointer;
-  color: #192e1b;
+  color: var(--verde-oscuro);
 }
 
 .menu:hover {
   background: #192e1b;
   color: #fefefe;
 }
+
+.menu span {
+  display: block;
+}
+
+.menu .brux {
+  width: 0px;
+  overflow: hidden;
+  transition: 2s;
+}
+
+/* Acciones
+-----------------------------------------------------*/
 
 .fueraTitulo {
   left: -100vw;
@@ -94,11 +119,9 @@ body {
   left: 0;
   right: 0;
   top: 0;
-} 
+}
 
-.titulo:after {
-  content: "Diseño de información para p" "\00e1" "ginas web y todo tipo de piezas digitales e impresas.";
-  position: absolute;
-  bottom: -100px;
-  left: 30px;
+.verBrux {
+  width: 5ch !important;
+  color: var(--verde-brilante);
 }
