@@ -1,17 +1,14 @@
 /* Globales
 -----------------------------------------------------*/
-
 :root {
   --verde-brilante: #62e980;
   --verde-oscuro: #192e1b;
 }
-
 html {
   height: 100vh;
 }
-
 body {
-  background: #e0e9e1;
+  background: #fefefe;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 22px;
   margin: 0;
@@ -22,7 +19,6 @@ body {
   height: 100vh;
   flex-wrap: wrap;
 }
-
 .inselecto {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -32,13 +28,20 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
-
+.fondo {
+  background: #e0e9e1;
+  position: absolute;
+  top: 23px;
+  bottom: 23px;
+  left: 20px;
+  width: calc(100vw - 40px);
+  transition: 1s;
+}
 /* Tarjeta de inicio
 -----------------------------------------------------*/
-
 .titulo {
   background: #fefefe;
-  box-shadow: 0 40px 55px -35px #939393;
+  box-shadow: 0 40px 55px -35px #626262;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -46,9 +49,8 @@ body {
   left: 0px;
   transition: 0.5s;
 }
-
 .titulo h1 {
-  color: #192e1b;
+  color: var(--verde-oscuro);
   font-size: 6em;
   text-shadow: -3px 3px 0px var(--verde-brilante);
   font-weight: normal;
@@ -56,32 +58,29 @@ body {
   margin: 0;
   padding-top: 40px;
 }
-
 .titulo h2 {
   font-size: 1.9em;
-  background: var(--verde-brilante);
-  color: #ffffff;
+  background: var(--verde-oscuro);
+  color: var(--verde-brilante);
   padding: 40px;
   margin: 0;
   text-align: center;
   display: flex;
   align-items: center;
 }
-
 .titulo:after {
   content: "Diseño de información para p" "\00e1" "ginas web y todo tipo de piezas digitales e impresas.";
   position: absolute;
-  bottom: -100px;
+  bottom: -90px;
   left: 30px;
+  font-size: 1.1em;
 }
-
-/* Menú
+/* MenÃº
 -----------------------------------------------------*/
-
 .menu {
   position: absolute;
-  top: 0px;
-  right: 20px;
+  top: 23px;
+  right: 50px;
   left: auto;
   background: #fefefe;
   padding: 10px 20px;
@@ -92,36 +91,33 @@ body {
   cursor: pointer;
   color: var(--verde-oscuro);
 }
-
 .menu:hover {
   background: #192e1b;
   color: #fefefe;
+  top: 10px;
 }
-
 .menu span {
   display: block;
+  width: 5ch;
+  text-align: center;
 }
-
 .menu .brux {
   color: var(--verde-brilante);
   width: 0px;
   overflow: hidden;
   transition: 2s;
 }
-
 /* Acciones
 -----------------------------------------------------*/
-
 .fueraTitulo {
   left: -100vw;
 }
-
 .fueraMenu {
-  left: 0;
-  right: 0;
-  top: 0;
+  top: 23px;
 }
-
 .verBrux {
   width: 5ch !important;
+}
+.fondoPeque {
+  width: 500px;
 }
