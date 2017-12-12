@@ -7,10 +7,11 @@ body {
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #ff1a02;
+  color: #303030;
 }
 .contenedor {
   max-width: 650px;
+  padding: 0 20px;
   margin: 40px auto;
 }
  .encabezado img {
