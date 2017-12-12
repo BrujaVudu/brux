@@ -3,6 +3,10 @@
 :root {
   --verde-brilante: #62e980;
   --verde-oscuro: #192e1b;
+  --fondo-0: #e0e9e1;
+  --fondo-1: #A0AFA1;
+  --fondo-2: #ff911ddb;
+  --fondo-3: #ff445eed;
 }
 html {
   height: 100vh;
@@ -18,7 +22,10 @@ body {
   justify-content: center;
   height: 100vh;
   flex-wrap: wrap;
-  overflow: hidden;
+}
+body p {
+  line-height: 1.4em;
+  color: var(--verde-oscuro);
 }
 .inselecto {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -30,19 +37,19 @@ body {
                                   supported by Chrome and Opera */
 }
 .fondo {
-  background: #e0e9e1;
+  background: var(--fondo-1);
   position: absolute;
-  top: 23px;
-  bottom: 23px;
-  left: 20px;
-  width: calc(100vw - 40px);
+  top: 40px;
+  bottom: 40px;
+  left: 40px;
+  width: calc(100vw - 80px);
   transition: 1s;
 }
 /* Tarjeta de inicio: logo
 -----------------------------------------------------*/
 .logo {
   background: #fefefe;
-  box-shadow: 0 40px 55px -35px #626262;
+  box-shadow: 0 40px 55px -35px #00000099;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -70,18 +77,19 @@ body {
   align-items: center;
 }
 .logo:after {
-  content: "Dise" "\00f1" "o de informaci" "\00f3" "n para p" "\00e1" "ginas web y todo tipo de piezas digitales e impresas.";
+  content: "Dise" "\00f1" "o de informaci" "\00f3" "n para sitios web y todo tipo de piezas digitales e impresas.";
   position: absolute;
   bottom: -90px;
   left: 30px;
   font-size: 1.1em;
+  color: white;
 }
-/* MenÃƒÆ’Ã‚Âº
+/* MenÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âº
 -----------------------------------------------------*/
 .menu {
-  position: absolute;
-  top: 23px;
-  right: 50px;
+  position: fixed;
+  top: 20px;
+  right: 80px;
   left: auto;
   z-index: 9999;
   background: #fefefe;
@@ -92,6 +100,7 @@ body {
   transition: 0.8s;
   cursor: pointer;
   color: var(--verde-oscuro);
+  box-shadow: 0 2px 20px -8px #00000099;
 }
 .menu:hover {
   background: #192e1b;
@@ -109,23 +118,26 @@ body {
   overflow: hidden;
   transition: 2s;
 }
-/* PresentaciÃ³n
+/* PresentaciÃ³nn
 -----------------------------------------------------*/
 .presentacion {
+  display: none;
   position: absolute;
-  top: 100px;
+  top: 180px;
   right: -100vw;
   width: 100vw;
   transition: 0.8S;
   left: 100vw;
 }
-
-.titulo h1 {
+.resumen {
+  width: 600px;
+}
+.resumen h1 {
+  color: var(--verde-oscuro);
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 2.5em;
-  width: 600px;
-  color: var(--verde-oscuro);
+  margin: 30px 0 60px;
 }
 /* Acciones
 -----------------------------------------------------*/
@@ -141,10 +153,11 @@ body {
   width: 5ch !important;
 }
 .fondoPeque {
-  width: 350px;
+  width: 32vw;
+  position: fixed;
 }
 .entraPresentacion {
   right: 0;
   width: auto;
-  left: 200px;
+  left: 25vw;
 }
