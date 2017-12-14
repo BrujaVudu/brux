@@ -7,10 +7,11 @@ body {
 a {
   font-weight: bold;
   text-decoration: none;
-  color: #ff1a02;
+  color: #303030;
 }
 .contenedor {
   max-width: 650px;
+  padding: 0 20px;
   margin: 40px auto;
 }
  .encabezado img {
@@ -45,7 +46,48 @@ a {
     background: #f8f8f8;
     border-right: 1px solid #ececec;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 40px;
+  }
+  .barra * {
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+  }
+  .barra *::after {
+    position: absolute;
+    border: solid 1px #ececec;
+    background: white;
+    font-size: 0.8em;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    top: -5px;
+    display: none;
+    color: #999;
+  }
+  .barra *:hover:after {
+    display: inline;
+  }
+  .barra img {
+    filter: grayscale(100%);
+  }
+  .barra img:hover {
+    filter: grayscale(60%);
+  }  
+  .barra .abogados::after {
+    content: "Abogados";
+  }
+  .barra .servicios::after {
+    content: "Servicios";
+  }
+  .barra .contacto::after {
+    content: "Contacto";
+  }
+  .barra a {
+    color: #a09f9f;
+  }
+  .barra a:hover {
+    color: #7d7d7d;
   }
   @media (max-width: 820px) {
   .barra {
