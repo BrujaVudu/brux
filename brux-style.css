@@ -22,6 +22,8 @@ body {
   justify-content: center;
   height: 100vh;
   flex-wrap: wrap;
+  position: relative;
+  overflow-x: hidden;
 }
 body p {
   line-height: 1.4em;
@@ -37,19 +39,31 @@ body p {
                                   supported by Chrome and Opera */
 }
 .fondo {
-  background: var(--fondo-1);
+  background-image: linear-gradient(to right top, #171b27, #1e2231, #242a3b, #2c3145, #333950);
+  /* background: var(--fondo-1); */
   position: absolute;
-  top: 40px;
-  bottom: 40px;
-  left: 40px;
-  width: calc(100vw - 80px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(100vw - 0px);
   transition: 1s;
+}
+.brux-fondo {
+  font-size: 540px;
+  color: #ffffff04;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.brux-fondo span {
+  position: relative;
+  bottom: -240px;
+  right: -160px;
 }
 /* Tarjeta de inicio: logo
 -----------------------------------------------------*/
 .logo {
-  background: #fefefe;
-  box-shadow: 0 40px 55px -35px #00000099;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -58,23 +72,23 @@ body p {
   transition: 0.5s;
 }
 .logo h1 {
-  color: var(--verde-oscuro);
+  color: white;
   font-size: 6em;
-  text-shadow: -3px 3px 0px var(--verde-brilante);
-  font-weight: normal;
+  font-weight: lighter;
   text-align: center;
   margin: 0;
   padding-top: 40px;
 }
 .logo h2 {
   font-size: 1.9em;
-  background: var(--verde-oscuro);
-  color: var(--verde-brilante);
+  color: white;
   padding: 40px;
   margin: 0;
   text-align: center;
   display: flex;
   align-items: center;
+  border-left: solid #f35635;
+  font-weight:  100;
 }
 .logo:after {
   content: "Dise" "\00f1" "o de informaci" "\00f3" "n para sitios web y todo tipo de piezas digitales e impresas.";
@@ -82,55 +96,46 @@ body p {
   bottom: -90px;
   left: 30px;
   font-size: 1.1em;
-  color: white;
+  color: #ffffff50;
+  width:  100%;
+  text-align: center;
 }
-/* MenÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âº
+/* Menú
 -----------------------------------------------------*/
 .menu {
   position: fixed;
-  top: 20px;
-  right: 80px;
+  top: 0;
+  right: 0px;
   left: auto;
   z-index: 9999;
-  background: #fefefe;
-  padding: 10px 20px;
-  font-weight:600;
+  padding: 20px 20px;
+  font-weight: 100;
   font-size: 1.2em;
-  border-bottom: solid 4px var(--verde-brilante);
+  border-right: solid 4px #f35635;
   transition: 0.8s;
   cursor: pointer;
-  color: var(--verde-oscuro);
-  box-shadow: 0 2px 20px -8px #00000099;
+  color: #ffffff60;
 }
 .menu:hover {
-  background: #192e1b;
   color: #fefefe;
-  top: 10px;
 }
 .menu span {
   display: block;
-  width: 5ch;
   text-align: center;
 }
-.menu .brux {
-  color: var(--verde-brilante);
-  width: 0px;
-  overflow: hidden;
-  transition: 2s;
-}
-/* PresentaciÃ³nn
+/* Presentacion
 -----------------------------------------------------*/
 .presentacion {
-  display: none;
   position: absolute;
-  top: 180px;
+  top: 120px;
   right: -100vw;
   width: 100vw;
   transition: 0.8S;
   left: 100vw;
 }
 .resumen {
-  width: 600px;
+  max-width: 600px;
+  padding-right: 20px;
 }
 .resumen h1 {
   color: var(--verde-oscuro);
@@ -139,25 +144,23 @@ body p {
   font-size: 2.5em;
   margin: 30px 0 60px;
 }
+.resumen p > b {
+  color: #f35635;
+}
 /* Acciones
 -----------------------------------------------------*/
 .fueraLogo {
   left: -100vw;
 }
 .fueraMenu {
-  top: 0;
-  background: #192e1b;
-  color: #fefefe;
-}
-.verBrux {
-  width: 5ch !important;
+  color: #333950;
 }
 .fondoPeque {
-  width: 32vw;
+  width: 24vw;
   position: fixed;
 }
 .entraPresentacion {
   right: 0;
-  width: auto;
-  left: 25vw;
+  width: 66vw;
+  left: 34vw;
 }
