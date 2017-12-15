@@ -1,12 +1,7 @@
 /* Globales
 -----------------------------------------------------*/
 :root {
-  --verde-brilante: #62e980;
   --verde-oscuro: #192e1b;
-  --fondo-0: #e0e9e1;
-  --fondo-1: #A0AFA1;
-  --fondo-2: #ff911ddb;
-  --fondo-3: #ff445eed;
 }
 html {
   height: 100vh;
@@ -40,12 +35,12 @@ body p {
 }
 .fondo {
   background-image: linear-gradient(to right top, #171b27, #1e2231, #242a3b, #2c3145, #333950);
-  /* background: var(--fondo-1); */
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  width: calc(100vw - 0px);
+  right: 0;
+  width: 100vw;
   transition: 1s;
 }
 .brux-fondo {
@@ -69,7 +64,7 @@ body p {
   position: relative;
   top: -20px;
   left: 0px;
-  transition: 0.5s;
+  transition: 1s;
 }
 .logo h1 {
   color: white;
@@ -100,7 +95,7 @@ body p {
   width:  100%;
   text-align: center;
 }
-/* Menú
+/* MenÃº
 -----------------------------------------------------*/
 .menu {
   position: fixed;
@@ -129,13 +124,13 @@ body p {
   position: absolute;
   top: 120px;
   right: -100vw;
-  width: 100vw;
-  transition: 0.8S;
-  left: 100vw;
+  transition: 1s;
+  text-align: right;  
 }
 .resumen {
-  max-width: 600px;
-  padding-right: 20px;
+  max-width:600px;
+  padding-right: 8vw;
+  
 }
 .resumen h1 {
   color: var(--verde-oscuro);
@@ -144,7 +139,7 @@ body p {
   font-size: 2.5em;
   margin: 30px 0 60px;
 }
-.resumen p > b {
+.resumen b {
   color: #f35635;
 }
 /* Acciones
@@ -152,15 +147,12 @@ body p {
 .fueraLogo {
   left: -100vw;
 }
-.fueraMenu {
-  color: #333950;
-}
 .fondoPeque {
-  width: 24vw;
   position: fixed;
+  right: 0;
+  left: 65vw;
 }
 .entraPresentacion {
-  right: 0;
-  width: 66vw;
-  left: 34vw;
+  right: 35vw;
+  left: auto;
 }
